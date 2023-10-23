@@ -8,7 +8,7 @@ public class DoubleOrNothing {
   private int points;
   private static int startPoints = 10;
   private String option;
-  private Scanner sc = new Scanner(System.in);
+  private Scanner sc;
   private Random random = new Random();
   private int chance;
 
@@ -26,6 +26,7 @@ public class DoubleOrNothing {
   }
 
   public void playGame() {
+    sc = new Scanner(System.in);
     this.points = startPoints;
 
     askInput();
@@ -42,5 +43,6 @@ public class DoubleOrNothing {
       askInput();
     }
     printGoodbye();
+    sc.close();
   }
 }
