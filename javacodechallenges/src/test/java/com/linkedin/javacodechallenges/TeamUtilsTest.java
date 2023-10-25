@@ -75,15 +75,11 @@ public class TeamUtilsTest {
     List<Team> teams = List.of(team1, team2, team3);
     TeamUtils.revealResults(teams);
 
-    assertEquals("Now for the results, the WINNER is...\n" +
-        "With 15 points, it's team Eric and Rebecca!\n" +
-        "\n" +
-        "Then we have... \n" +
-        "With 12 points, it's team Tony and Shannon!\n" +
-        "\n" +
-        "Then we have... \n" +
-        "With 11 points, it's team Sally and Roger!\n" +
-        "\n", printOut.toString());
+    assertEquals("The winners are Eric-Rebecca.\n" +
+        "Scoreboard:\n" +
+        "Eric-Rebecca: 15 points\n" +
+        "Tony-Shannon: 12 points\n" +
+        "Sally-Roger: 11 points\n", printOut.toString());
   }
 
   @Test
@@ -95,15 +91,11 @@ public class TeamUtilsTest {
     List<Team> teams = List.of(team1, team2, team3);
     TeamUtils.revealResults(teams);
 
-    assertEquals("Now for the results, the WINNER is...\n" +
-        "With 15 points, it's team Eric and Rebecca!\n" +
-        "\n" +
-        "Then we have... \n" +
-        "With 9 points, it's team Tony and Shannon!\n" +
-        "\n" +
-        "Then we have... \n" +
-        "With 7 points, it's team Sally and Roger!\n" +
-        "\n", printOut.toString());
+    assertEquals("The winners are Eric-Rebecca.\n" +
+        "Scoreboard:\n" +
+        "Eric-Rebecca: 15 points\n" +
+        "Tony-Shannon: 9 points\n" +
+        "Sally-Roger: 7 points\n", printOut.toString());
   }
 
   @Test
@@ -134,14 +126,11 @@ public class TeamUtilsTest {
 
     TeamUtils.revealResults(teams);
 
-    assertEquals("Now for the results, the WINNER is...\n" +
-        "It's a TIE!\n" +
-        "With 12 points, it's team Sally and Roger!\n" +
-        "With 12 points, it's team Eric and Rebecca!\n" +
-        "\n" +
-        "Then we have... \n" +
-        "With 10 points, it's team Tony and Shannon!\n" +
-        "\n", printOut.toString());
+    assertEquals("The winners are Eric-Rebecca, Sally-Roger.\n" +
+        "Scoreboard:\n" +
+        "Eric-Rebecca: 12 points\n" +
+        "Sally-Roger: 12 points\n" +
+        "Tony-Shannon: 10 points\n", printOut.toString());
   }
 
   @Test
@@ -154,13 +143,10 @@ public class TeamUtilsTest {
 
     TeamUtils.revealResults(teams);
 
-    assertEquals("Now for the results, the WINNER is...\n" +
-        "With 14 points, it's team Sally and Roger!\n" +
-        "\n" +
-        "Then we have... \n" +
-        "It's a TIE!\n" +
-        "With 10 points, it's team Eric and Rebecca!\n" +
-        "With 10 points, it's team Tony and Shannon!\n" +
-        "\n", printOut.toString());
+    assertEquals("The winners are Sally-Roger.\n" +
+        "Scoreboard:\n" +
+        "Sally-Roger: 14 points\n" +
+        "Eric-Rebecca: 10 points\n" +
+        "Tony-Shannon: 10 points\n", printOut.toString());
   }
 }

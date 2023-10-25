@@ -21,4 +21,9 @@ public class Team {
     return scores.stream().filter(score -> score > 0)
         .reduce(Integer::sum).orElse(0);
   }
+
+  @Override
+  public String toString() {
+    return player1 + "-" + player2 + ": " + scores;
+  }
 }
